@@ -1,38 +1,220 @@
-.App {
-  text-align: center;
+.custom-date-range-calendar
+  .MuiDateRangePickerDay-rangeIntervalDayHighlightStart {
+  background-color: black !important;
+  color: white !important;
+  border-radius: 50%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.custom-date-range-calendar
+  .MuiDateRangePickerDay-rangeIntervalDayHighlightEnd {
+  background-color: black !important;
+  color: white !important;
+  border-radius: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.custom-date-range-calendar .MuiDateRangePickerDay-rangeIntervalDayHighlight {
+  background-color: #f6f6f6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.custom-date-range-calendar .MuiDateRangePickerDay-day {
+  color: black;
+}
+
+.custom-date-range-calendar
+  .MuiDateRangePickerDay-day.Mui-selected:nth-child(odd) {
+  color: #fff;
+  background-color: #000;
+  font-weight: 500;
+  border-radius: 50%;
+  will-change: font-weight;
+}
+
+.custom-date-range-calendar .MuiDateRangePickerDay-day.Mui-selected:hover {
+  background-color: #000;
+  will-change: font-weight;
+}
+
+.MuiDateRangeCalendar-root .MuiDateRangeCalendar-container:not(:last-of-type) {
+  border-right: 0px;
+}
+
+.mySwiper {
+  width: 310px;
+  height: 305px;
+  /* border: 2px solid red; */
+  border-radius: 12px;
+}
+
+/* .swiper {
+  width: 100%;
+  height: 100%;
+} */
+
+/* .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #fff;
+  border-radius: 50%;
+  /* width: 50px; */
+  height: 27px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #000;
+  --swiper-navigation-color: #000;
+  --swiper-navigation-size: 27px;
+  width: calc(var(--swiper-navigation-size)) !important;
+  padding-left: 5px;
+  padding-top: 4px;
+  display: none !important;
 }
 
-.App-link {
-  color: #61dafb;
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  width: 10px;
+  height: 10px;
+  color: #000;
+  font-size: 8px;
+  --swiper-navigation-size: 8px;
+  font-weight: bolder;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #e6e5e5;
+  border-radius: 50%;
+  /* width: 50px; */
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  --swiper-navigation-color: #000;
+  --swiper-navigation-size: 28px;
+  width: calc(var(--swiper-navigation-size)) !important;
+  padding-left: 5px;
+  padding-top: 4px;
 }
+
+.swiper-button-prev:after:hover,
+.swiper-button-next:after:hover {
+  width: 12px;
+  height: 12px;
+  color: #000;
+  font-size: 12px;
+  --swiper-navigation-size: 12px;
+  font-weight: bolder;
+}
+
+.swiper-pagination-bullet-active {
+  --swiper-pagination-color: #fff;
+  --swiper-theme-color: #fff;
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+  --swiper-pagination-bullet-width: 10px;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-height: 10px;
+  --swiper-pagination-bullet-inactive-color: #ff385c;
+  width: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size)
+  ) !important;
+  height: var(
+    --swiper-pagination-bullet-height,
+    var(--swiper-pagination-bullet-size)
+  ) !important;
+}
+
+.swiper-horizontal
+  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic
+  .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic
+  .swiper-pagination-bullet {
+  transition: 200ms transform, 200ms left;
+  --swiper-pagination-bullet-width: 12px;
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-pagination-bullet-height: 12px;
+  --swiper-pagination-bullet-inactive-color: #ff385c;
+  width: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size)
+  );
+  height: var(
+    --swiper-pagination-bullet-height,
+    var(--swiper-pagination-bullet-size)
+  );
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-width: 10px;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-height: 10px;
+  --swiper-pagination-bullet-inactive-color: #9ea832;
+  width: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size)
+  ) !important;
+  height: var(
+    --swiper-pagination-bullet-height,
+    var(--swiper-pagination-bullet-size)
+  ) !important;
+  display: inline-block;
+  border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
+  background: var(--swiper-pagination-bullet-inactive-color, hwb(180 3% 8%));
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+}
+
+.card-container:hover .swiper-button-next {
+  background-color: #fff;
+  border-radius: 50%;
+  /* width: 50px; */
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  --swiper-navigation-color: #000;
+  --swiper-navigation-size: 27px;
+  width: calc(var(--swiper-navigation-size)) !important;
+  padding-left: 5px;
+  padding-top: 4px;
+  display: flex !important;
+}
+
+.card-container:hover .swiper-button-prev {
+  background-color: #fff;
+  border-radius: 50%;
+  /* width: 50px; */
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  --swiper-navigation-color: #000;
+  --swiper-navigation-size: 27px;
+  width: calc(var(--swiper-navigation-size)) !important;
+  padding-left: 5px;
+  padding-top: 4px;
+  display: flex !important;
+}
+
+/* .mySwiper img:nth-of-type(1) .swiper-button-prev {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  --swiper-navigation-color: #000;
+  --swiper-navigation-size: 27px;
+  width: calc(var(--swiper-navigation-size)) !important;
+  padding-left: 5px;
+  padding-top: 4px;
+  display: flex !important;
+} */
